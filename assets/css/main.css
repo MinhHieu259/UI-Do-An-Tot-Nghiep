@@ -2,6 +2,14 @@ html{
     font-family: 'Roboto', sans-serif;
 }
 
+body{
+    background-color: #F9FBFD;
+}
+
+a {
+    text-decoration: none !important;
+}
+
 .navbar-top {
     background-color: white;
     border-bottom: 1px gainsboro solid;
@@ -109,4 +117,66 @@ html{
 	.modal.left.fade.in .modal-dialog{
 		left: 0;
 	}
-        
+
+.card{
+    width: 180px;
+    height: 375px;
+}
+
+.btn_book{
+    width:100%;
+    background-color: #dc2626;
+    color: white;
+    font-size: 13px;;
+}
+
+.date-show{
+    color: gray;
+    font-size: 14px;
+}
+
+.logo-footer{
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.text-footer{
+    margin-top: 10px;
+    color: gray;
+    font-size: 14px;
+}
+
+.partner{
+    margin-top: 10px;
+    color: gray;
+    font-size: 14px;
+}
+
+.title-bold{
+    font-weight: bold;
+}
+
+.partner-logo{
+    margin-top: 10px;
+}
+
+.avatar-partner{
+    position: relative;
+    display: inline-block;
+    padding: 3px;
+}
+
+.round-circle{
+    border-radius: 50%!important;
+    width: 40px;
+}
+
+.license-logo{
+    margin-left: 120px;
+}
+
+.footer-user-page{
+    background-color: #EDF2F9;
+    margin-top: 10px;
+}
