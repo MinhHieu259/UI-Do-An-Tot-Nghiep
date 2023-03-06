@@ -4,6 +4,9 @@ html{
 
 body{
     background-color: #F9FBFD;
+    height: auto;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -118,6 +121,25 @@ a {
 		left: 0;
 	}
 
+    	
+	.modal.right .modal-body,
+	.modal.right .modal-body {
+		padding: 15px 15px 80px;
+	}
+
+/*Right*/
+	.modal.right.fade .modal-dialog{
+		right: 0px;
+		-webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+		        transition: opacity 0.3s linear, left 0.3s ease-out;
+	}
+	
+	.modal.right.fade.in .modal-dialog{
+		right: 0;
+	}
+
 .card{
     width: 180px;
     height: 375px;
@@ -178,5 +200,57 @@ a {
 
 .footer-user-page{
     background-color: #EDF2F9;
-    margin-top: 10px;
+    margin-top: 20px;
 }
+
+.review-new{
+    width: 100%;
+}
+
+.review-right{
+    width: 100%;
+}
+
+.area-review{
+    margin-top: 20px;
+}
+
+.card-header-review{
+    background-color: #edf2f9;
+}
+
+.province-logo-nav{
+    margin-right: 15px;
+     color: gray;
+}
+
+.number-rap{
+    color: gray;
+    font-size: 12px;
+}
+.name-cate-review{
+    color: red;
+    font-size: 12px;
+}
+.time-post-review{
+    color: gray;
+}
+.name-review{
+    color: black;
+    font-weight: bold;
+}
+.desc-review{
+    color: gray;
+    font-size: 12px;
+}
+
+.card{
+    height: auto;
+}
+
+#lich-chieu-background{
+   width: 100%;
+   height: 120px;
+   background-image: url(https://moveek.com/build/images/tix-banner.36bfeb64.png);
+}
+

@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lịch chiếu - rạp - giá vé</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/slider.css" />
+    <link rel="stylesheet" href="./assets/css/owl.carousel.css" />
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.css" />
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-top">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#">Logo</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 item-navbartop">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Mua vé</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Lịch chiếu</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Phim
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Rạp
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Tin tức
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cộng đồng</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 form-search">
+          <input
+            class="form-control mr-sm-2 input-search"
+            type="search"
+            placeholder="Từ khóa tìm kiếm..."
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Tìm kiếm
+          </button>
+        </form>
+        <div class="area-right-nav">
+          <a
+            href="#"
+            class="province-logo-nav"
+            data-toggle="modal"
+            data-target="#modelProvince"
+          >
+            <i class="fa-solid fa-map-location-dot"></i>
+          </a>
+
+          <a
+            href="#"
+            class="user-logo-nav"
+            data-toggle="modal"
+            data-target="#myModal"
+          >
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="app">
+      <div class="main-content">
+        <div class="bg-white border-top border-bottom mt-3 pt-4">
+          <div id="lich-chieu-background">
+            <div class="container pt-4 pb-4">
+              <div class="text-center">
+                <h1 class="mb-3 text-white">Lịch chiếu</h1>
+                <div class="text-white mt-0 description">
+                  Tìm lịch chiếu phim / rạp nhanh nhất với chỉ 1 bước!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card d-none d-sm-block" style="width: 100%">
+                <div class="list-group list-group-flush list">
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action disabled bg-light"
+                  >
+                    Khu vực
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region active"
+                    data-region="1"
+                  >
+                    Tp. Hồ Chí Minh
+                    <span class="badge badge-primary badge-pill">56</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="9"
+                  >
+                    Hà Nội
+                    <span class="badge badge-primary badge-pill">43</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="7"
+                  >
+                    Đà Nẵng
+                    <span class="badge badge-primary badge-pill">9</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="3"
+                  >
+                    Đồng Nai
+                    <span class="badge badge-primary badge-pill">8</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="4"
+                  >
+                    Bình Dương
+                    <span class="badge badge-primary badge-pill">8</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="15"
+                  >
+                    Bà Rịa - Vũng Tàu
+                    <span class="badge badge-primary badge-pill">7</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="12"
+                  >
+                    Khánh Hòa
+                    <span class="badge badge-primary badge-pill">6</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="6"
+                  >
+                    Cần Thơ
+                    <span class="badge badge-primary badge-pill">5</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="23"
+                  >
+                    Lâm Đồng
+                    <span class="badge badge-primary badge-pill">5</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="10"
+                  >
+                    Hải Phòng
+                    <span class="badge badge-primary badge-pill">4</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="8"
+                  >
+                    Quảng Ninh
+                    <span class="badge badge-primary badge-pill">4</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="11"
+                  >
+                    Thừa Thiên - Huế
+                    <span class="badge badge-primary badge-pill">4</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="33"
+                  >
+                    Bắc Ninh
+                    <span class="badge badge-primary badge-pill">4</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="24"
+                  >
+                    Kiên Giang
+                    <span class="badge badge-primary badge-pill">3</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="29"
+                  >
+                    Hải Dương
+                    <span class="badge badge-primary badge-pill">3</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="14"
+                  >
+                    Bình Định
+                    <span class="badge badge-primary badge-pill">3</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="5"
+                  >
+                    Đắk Lắk
+                    <span class="badge badge-primary badge-pill">3</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="21"
+                  >
+                    Nghệ An
+                    <span class="badge badge-primary badge-pill">3</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="49"
+                  >
+                    Tiền Giang
+                    <span class="badge badge-primary badge-pill">3</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="53"
+                  >
+                    Bình Phước
+                    <span class="badge badge-primary badge-pill">2</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="18"
+                  >
+                    An Giang
+                    <span class="badge badge-primary badge-pill">2</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="2"
+                  >
+                    Bắc Giang
+                    <span class="badge badge-primary badge-pill">2</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="30"
+                  >
+                    Cà Mau
+                    <span class="badge badge-primary badge-pill">2</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="36"
+                  >
+                    Tây Ninh
+                    <span class="badge badge-primary badge-pill">2</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="22"
+                  >
+                    Thái Nguyên
+                    <span class="badge badge-primary badge-pill">2</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="25"
+                  >
+                    Thanh Hóa
+                    <span class="badge badge-primary badge-pill">2</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="40"
+                  >
+                    Sóc Trăng
+                    <span class="badge badge-primary badge-pill">2</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="41"
+                  >
+                    Quảng Bình
+                    <span class="badge badge-primary badge-pill">2</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="47"
+                  >
+                    Lạng Sơn
+                    <span class="badge badge-primary badge-pill">2</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="42"
+                  >
+                    Quảng Nam
+                    <span class="badge badge-primary badge-pill">2</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="51"
+                  >
+                    Quảng Ngãi
+                    <span class="badge badge-primary badge-pill">2</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="52"
+                  >
+                    Kon Tum
+                    <span class="badge badge-primary badge-pill">2</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="13"
+                  >
+                    Bình Thuận
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="19"
+                  >
+                    Bến Tre
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="27"
+                  >
+                    Trà Vinh
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="28"
+                  >
+                    Vĩnh Long
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="16"
+                  >
+                    Ninh Bình
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="17"
+                  >
+                    Phú Thọ
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="35"
+                  >
+                    Hậu Giang
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="20"
+                  >
+                    Thái Bình
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="55"
+                  >
+                    Đồng Tháp
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="56"
+                  >
+                    Hưng Yên
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="31"
+                  >
+                    Hà Tĩnh
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="26"
+                  >
+                    Yên Bái
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="45"
+                  >
+                    Long An
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="57"
+                  >
+                    Hòa Bình
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="34"
+                  >
+                    Tuyên Quang
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="38"
+                  >
+                    Nam Định
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="46"
+                  >
+                    Sơn La
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="37"
+                  >
+                    Phú Yên
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="50"
+                  >
+                    Quảng Trị
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="48"
+                  >
+                    Hà Nam
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="43"
+                  >
+                    Ninh Thuận
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="44"
+                  >
+                    Gia Lai
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center btn-choose-region"
+                    data-region="54"
+                  >
+                    Vĩnh Phúc
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div id="blockCinemas">
+                <div class="card d-none d-sm-block" style="width: 100%;">
+                  <div class="list-group list-group-flush list">
+                    <div>
+                      <a
+                        href="#"
+                        class="list-group-item list-group-item-action disabled bg-light"
+                        ><img
+                          src="https://hcm01.vstorage.vngcloud.vn/v1/AUTH_0e0c1e7edc044168a7f510dc6edd223b/media-prd/cache/square/59a2a1753d6416c84b4e05146280584a33448c14.png"
+                          alt=""
+                          class="rounded-circle float-left mr-3"
+                          width="24"
+                        />Cinestar</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="118366"
+                        >Cinestar Quốc Thanh</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126681"
+                        >Cinestar Hai Bà Trưng</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action disabled bg-light"
+                        ><img
+                          src="https://hcm01.vstorage.vngcloud.vn/v1/AUTH_0e0c1e7edc044168a7f510dc6edd223b/media-prd/cache/square/4e2f8af9e4d780495cbc387e5868c2a48c7f82c2.png"
+                          alt=""
+                          class="rounded-circle float-left mr-3"
+                          width="24"
+                        />Mega GS Cinemas</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="123414"
+                        >Mega GS Cao Thắng</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126815"
+                        >Mega GS Lý Chính Thắng</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action disabled bg-light"
+                        ><img
+                          src="https://hcm01.vstorage.vngcloud.vn/v1/AUTH_0e0c1e7edc044168a7f510dc6edd223b/media-prd/cache/square/a1cd7de61579e7bca68c7bee4d76c4c7388478cb.png"
+                          alt=""
+                          class="rounded-circle float-left mr-3"
+                          width="24"
+                        />Dcine</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126763"
+                        >DCINE Bến Thành</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action disabled bg-light"
+                        ><img
+                          src="https://hcm01.vstorage.vngcloud.vn/v1/AUTH_0e0c1e7edc044168a7f510dc6edd223b/media-prd/cache/square/5fffb2fcaf3c1018282624.png"
+                          alt=""
+                          class="rounded-circle float-left mr-3"
+                          width="24"
+                        />Beta Cinemas</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126807"
+                        >Beta Quang Trung</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action disabled bg-light"
+                        ><img
+                          src="https://hcm01.vstorage.vngcloud.vn/v1/AUTH_0e0c1e7edc044168a7f510dc6edd223b/media-prd/cache/square/5fffb30b3194c340097683.png"
+                          alt=""
+                          class="rounded-circle float-left mr-3"
+                          width="24"
+                        />Galaxy Cinema</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="4"
+                        >Galaxy Nguyễn Du</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="6"
+                        >Galaxy Tân Bình</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="19055"
+                        >Galaxy Kinh Dương Vương</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="114418"
+                        >Galaxy Quang Trung</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126671"
+                        >Galaxy Trung Chánh</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126692"
+                        >Galaxy Phạm Văn Chí</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126694"
+                        >Galaxy Huỳnh Tấn Phát</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126709"
+                        >Galaxy Nguyễn Văn Quá</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126779"
+                        >Galaxy Linh Trung Thủ Đức</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action disabled bg-light"
+                        ><img
+                          src="https://hcm01.vstorage.vngcloud.vn/v1/AUTH_0e0c1e7edc044168a7f510dc6edd223b/media-prd/cache/square/524ba157cd271c9c24d15f367a57c13abc26af06.jpg"
+                          alt=""
+                          class="rounded-circle float-left mr-3"
+                          width="24"
+                        />CGV Cinemas</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="7"
+                        >CGV CT Plaza</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="8"
+                        >CGV Hùng Vương Plaza</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="957"
+                        >CGV Crescent Mall</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="17537"
+                        >CGV Pandora City</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="113476"
+                        >CGV Aeon Tân Phú</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="115783"
+                        >CGV Thảo Điền Pearl</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="116692"
+                        >CGV Liberty Citypoint</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="116693"
+                        >CGV Vincom Thủ Đức</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="118008"
+                        >CGV Vivo City</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="124433"
+                        >CGV Vincom Gò Vấp</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="125374"
+                        >CGV Pearl Plaza</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126638"
+                        >CGV Hoàng Văn Thụ</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126639"
+                        >CGV Aeon Bình Tân</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126640"
+                        >CGV Vincom Đồng Khởi</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126662"
+                        >CGV Saigonres Nguyễn Xí</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126704"
+                        >CGV Sư Vạn Hạnh</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126735"
+                        >CGV Vincom Landmark 81</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126736"
+                        >CGV Satra Củ Chi</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126752"
+                        >CGV Giga Mall Thủ Đức</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126774"
+                        >CGV Lý Chính Thắng</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action disabled bg-light"
+                        ><img
+                          src="https://hcm01.vstorage.vngcloud.vn/v1/AUTH_0e0c1e7edc044168a7f510dc6edd223b/media-prd/cache/square/dcc08eb55eca8002f729ae0dff98a2ae6c031db0.png"
+                          alt=""
+                          class="rounded-circle float-left mr-3"
+                          width="24"
+                        />BHD Star Cineplex</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="10"
+                        >BHD Star 3/2</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="17529"
+                        >BHD Star Bitexco</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="113783"
+                        >BHD Star Phạm Hùng</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="123269"
+                        >BHD Star Quang Trung</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="125436"
+                        >BHD Star Thảo Điền</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126634"
+                        >BHD Star Lê Văn Việt</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action disabled bg-light"
+                        ><img
+                          src="https://hcm01.vstorage.vngcloud.vn/v1/AUTH_0e0c1e7edc044168a7f510dc6edd223b/media-prd/cache/square/38fee9d0c0a533a3d4fb4779d4efa8842a6d5bae.png"
+                          alt=""
+                          class="rounded-circle float-left mr-3"
+                          width="24"
+                        />Lotte Cinema</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="151"
+                        >Lotte Nam Sài Gòn</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="18992"
+                        >Lotte Cộng Hoà</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="113311"
+                        >Lotte Cantavil</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="114077"
+                        >Lotte Phú Thọ</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126636"
+                        >Lotte Nowzone</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126641"
+                        >Lotte Gò Vấp</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126657"
+                        >Lotte Thủ Đức</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126748"
+                        >Lotte Ung Văn Khiêm</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126749"
+                        >Lotte Gold View</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126785"
+                        >Lotte Moonlight Thủ Đức</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action disabled bg-light"
+                        ><img
+                          src="https://hcm01.vstorage.vngcloud.vn/v1/AUTH_0e0c1e7edc044168a7f510dc6edd223b/media-prd/cache/square/6397446bee6da982816422.png"
+                          alt=""
+                          class="rounded-circle float-left mr-3"
+                          width="24"
+                        />Đống Đa Cinema</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="154"
+                        >Đống Đa Cinema</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action disabled bg-light"
+                        ><img
+                          src="https://moveek.com/bundles/ornweb/img/no-thumbnail.png"
+                          alt=""
+                          class="rounded-circle float-left mr-3"
+                          width="24"
+                        />Viện Trao Đổi Văn Hóa Pháp</a
+                      ><a
+                        href="#"
+                        class="list-group-item list-group-item-action text-truncate btn-choose-cinema"
+                        data-cinema="126808"
+                        >Viện Trao đổi Văn Hóa Pháp - IDECAF</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div id="showtimes">
+                <div class="alert alert-light">Bạn chưa chọn rạp.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer-user-page">
+        <div class="row">
+          <div class="col-md-2">
+            <span class="logo-footer">Logo</span>
+          </div>
+          <div class="col-md-3 text-footer">
+            <span class="title-bold">CÔNG TY TNHH MOVIAA</span>
+            <br />
+            <span>Địa chỉ: Phong Điền, Thừa Thiên Huế</span>
+          </div>
+          <div class="col-md-3 partner">
+            <span class="title-bold">ĐỐI TÁC</span>
+            <div class="partner-logo">
+              <div class="avatar-partner">
+                <a href="#"
+                  ><img
+                    class="round-circle"
+                    src="https://moveek.com/bundles/ornweb/partners/beta-cineplex-v2.jpg"
+                    alt="logo"
+                /></a>
+              </div>
+              <div class="avatar-partner">
+                <a href="#"
+                  ><img
+                    class="round-circle"
+                    src="https://moveek.com/bundles/ornweb/partners/mega-gs-cinemas.png"
+                    alt="logo"
+                /></a>
+              </div>
+              <div class="avatar-partner">
+                <a href="#"
+                  ><img
+                    class="round-circle"
+                    src="https://moveek.com/bundles/ornweb/partners/cinestar.png"
+                    alt="logo"
+                /></a>
+              </div>
+              <div class="avatar-partner">
+                <a href="#"
+                  ><img
+                    class="round-circle"
+                    src="https://moveek.com/bundles/ornweb/partners/dcine.png"
+                    alt="logo"
+                /></a>
+              </div>
+              <div class="avatar-partner">
+                <a href="#"
+                  ><img
+                    class="round-circle"
+                    src="https://moveek.com/bundles/ornweb/partners/cinemax.png"
+                    alt="logo"
+                /></a>
+              </div>
+              <div class="avatar-partner">
+                <a href="#"
+                  ><img
+                    class="round-circle"
+                    src="https://moveek.com/bundles/ornweb/partners/starlight.png"
+                    alt="logo"
+                /></a>
+              </div>
+              <div class="avatar-partner">
+                <a href="#"
+                  ><img
+                    class="round-circle"
+                    src="https://moveek.com/bundles/ornweb/partners/rio.png"
+                    alt="logo"
+                /></a>
+              </div>
+              <div class="avatar-partner">
+                <a href="#"
+                  ><img
+                    class="round-circle"
+                    src="https://moveek.com/bundles/ornweb/partners/dong-da-cinemas.png"
+                    alt="logo"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="license-logo">
+              <img
+                src="https://moveek.com/bundles/ornweb/img/20150827110756-dathongbao.png"
+                width="200"
+                alt="Đã đăng ký với bộ công thương"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/owl.carousel.js"></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: true,
+          },
+          600: {
+            items: 3,
+            nav: true,
+          },
+          1000: {
+            items: 5,
+            nav: true,
+            loop: true,
+          },
+        },
+      });
+    </script>
+
+    <!-- Modal login -->
+    <div
+      class="modal left fade"
+      id="myModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <label for="#username">Tài khoản</label>
+            <input id="username" type="text" class="form-control" />
+            <a href="#" class="forgotPassword">Quên mật khẩu</a>
+            <label for="#password">Mật khẩu</label>
+            <input id="password" type="text" class="form-control" />
+            <button class="btn btn-login">Đăng nhập</button>
+            <p class="orLableLogin">Hoặc</p>
+            <button class="btn btn-primary btn-login-facebook">
+              <i class="fa-brands fa-facebook"></i> Đăng nhập bằng Facebook
+            </button>
+            <p class="no-have-account">
+              Chưa có tài khoản? <a href="#">Đăng ký ngay</a>
+            </p>
+          </div>
+        </div>
+        <!-- modal-content -->
+      </div>
+      <!-- modal-dialog -->
+    </div>
+    <!-- modal -->
+
+    <!--Modal province-->
+    <div
+      class="modal right fade"
+      id="modelProvince"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Tìm theo tỉnh thành phố"
+                />
+              </div>
+            </div>
+            <div class="list-group">
+              <button
+                type="button"
+                class="list-group-item list-group-item-action"
+              >
+                <b>Tp. Hồ Chí Minh</b>
+                <br />
+                <span class="number-rap">56 rạp</span>
+              </button>
+              <button
+                type="button"
+                class="list-group-item list-group-item-action"
+              >
+                <b>Tp. Hồ Chí Minh</b>
+                <br />
+                <span class="number-rap">56 rạp</span>
+              </button>
+              <button
+                type="button"
+                class="list-group-item list-group-item-action"
+              >
+                <b>Tp. Hồ Chí Minh</b>
+                <br />
+                <span class="number-rap">56 rạp</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- modal-content -->
+      </div>
+    </div>
+    <!--Modal province-->
+  </body>
+</html>
