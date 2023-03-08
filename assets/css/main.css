@@ -258,3 +258,29 @@ a {
     width: 80px;
 }
 
+.btn-date-choose-in-ticket{
+    width: 140px;
+}
+
+.bg-dark{
+    background-color: #12263f!important;
+}
+
+.featured-movie {
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.title-film-ticket{
+    font-size:25px;
+}
+.desc-film-ticket{
+    color: #8399B6 !important;
+    font-size: 15px;
+}
+
+.mua-ve-tt{
+    font-size:  20px;
+}
+
+
