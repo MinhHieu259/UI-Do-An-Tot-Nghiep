@@ -283,4 +283,20 @@ a {
     font-size:  20px;
 }
 
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #12263f;
+    background-color: transparent;
+    border-color: transparent transparent #2c7be5;
+}
 
+.nav-item a{
+    color: gray;
+}
+
+.card-wrap-dang-chieu{
+    margin-right: 10px; margin-bottom: 10px;
+}
+
+.card-dang-chieu{
+    height: 245px; width: 129px;
+}
