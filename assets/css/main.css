@@ -300,3 +300,13 @@ a {
 .card-dang-chieu{
     height: 245px; width: 129px;
 }
+
+.title-chi-tiet-phim{
+    color: white;
+    font-size: 25px;
+}
+
+.btn-do-movie-rate{
+    background: white;
+    color: black;
+}
